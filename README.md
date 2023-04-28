@@ -11,5 +11,5 @@ il faut installer certaines bibliothèques:
 ensuite il faut exécuter [Accueuil.py](https://github.com/yoyorap9/PyPoker/blob/main/Accueil.py) depuis le dossier PyPoker
 
 
-## jouer avec l'exicutable
+## jouer avec l'exécutable
 il est possible de jouer sur windows sans avoir à installer les bibliothèques grâce à l'exécutable disponible [ici](www.lmn-eleve1.free.fr/PyPoker/PyPoker.exe)  (il est trop grand por github)
