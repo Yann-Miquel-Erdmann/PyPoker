@@ -13,7 +13,7 @@ include "dbhandler.php";
         exit(json_encode($reponse,JSON_UNESCAPED_UNICODE));
     }
 
-    //requête 
+    // on récupère les informations du joueur mais pas son mot de passe qui reste dans la base de données
     $stmt = $conn->prepare("SELECT Gemmes, skins, skin_selectionne FROM joueurs WHERE pseudo = ?;");
     $stmt->bind_param("s", $data["joueur1"]);
     $stmt->execute();

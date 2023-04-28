@@ -6,19 +6,22 @@ include "dbhandler.php";
 
 //$data = array("joueur1"=>"joueur1", "partie"=>"joueur1§joueur2", "action"=>"mise", "texte"=>"","mise"=>50);
 
+//on vérifie que le joueur existe dans la base de données
 if(pseudo_existe($data["joueur1"]) == false){
     $reponse["erreur"] = true;
     $reponse["erreurs"][] = "le pseudonyme n'est pas dans la base de données";
     exit(json_encode($reponse,JSON_UNESCAPED_UNICODE));
 }
 
-
+//on vérifie que la partie existe
 if(ingame($data["joueur1"],true) != $data["partie"]){
     $reponse["erreur"] = true;
     $reponse["erreurs"][] = "cette partie n'existe pas";
     exit(json_encode($reponse,JSON_UNESCAPED_UNICODE));
 }
 
+
+// on ajoute l'action à la base de données
 $stmt = $conn->prepare("INSERT INTO {$data["partie"]} (player, mise, Action_, texte) VALUES(?, ?, ?, ?);");
 $stmt->bind_param("siss", $data["joueur1"],$data["mise"], $data["action"],$data["texte"]);
 $stmt->execute();

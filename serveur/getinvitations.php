@@ -9,7 +9,7 @@
         exit(json_encode($reponse,JSON_UNESCAPED_UNICODE));
     }
 
-    //requête 
+    // on récupère les invitation en lien avec le joueur
     $stmt = $conn->prepare("SELECT * From invitations WHERE (joueur = ? or invite = ?);");
     $stmt->bind_param("ss", $data["joueur1"], $data["joueur1"]);
     $stmt->execute();

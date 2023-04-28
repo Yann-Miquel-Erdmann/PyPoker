@@ -3,6 +3,7 @@ include "dbhandler.php";
 
 
 if ($data["action"] == "accept"){
+    // on vérifie que les deux joueurs existent.
     if (pseudo_existe($data["joueur1"]) == false or pseudo_existe($data["joueur2"]) == false) {
         $reponse["erreur"] = true;
         $reponse["erreurs"][] = "un des pseudonymes n'est pas dans la base de données";
@@ -28,12 +29,15 @@ if ($data["action"] == "accept"){
           ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci AUTO_INCREMENT=1;"
     );
 
+
+    // on génère le nombre alèatoire qui initialise les fonctions random des deux joueurs 
     $stmt = $conn->prepare("INSERT INTO `{$data["joueur1"]}§{$data["joueur2"]}`(Action_, mise) VALUES ('random',?);");
     $stmt->bind_param("i",rand(0,getrandmax()));
     $stmt->execute();
 
     $name = "{$data["joueur1"]}§{$data["joueur2"]}";
 
+    // on ajoute le nom de la partie à la table contenant les parties.
     $stmt = $conn->prepare("INSERT INTO `lmn_eleve1`.`parties` (`name_partie`) VALUES (? );");
     $stmt->bind_param("s", $name);
     $stmt->execute();

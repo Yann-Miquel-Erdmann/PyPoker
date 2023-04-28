@@ -12,7 +12,7 @@ include "dbhandler.php";
     }
 
     
-
+// on écrit dans le chat global
     $stmt = $conn->prepare("INSERT INTO chat_global (joueur, texte) VALUES(?, ?);");
     $stmt->bind_param("ss", $data["joueur1"], $data["texte"]);
     $stmt->execute();

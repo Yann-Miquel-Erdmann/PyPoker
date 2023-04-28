@@ -3,16 +3,18 @@ mysqli_report(MYSQLI_REPORT_OFF);
     // exit(json_encode($reponse,JSON_UNESCAPED_UNICODE));
     $reponse = array("erreur"=>false, "erreurs"=>[], "resultat"=>[]);
 
+
+    // ceci est une bibliothèque basique que nous avons crée pour les fonctions que nous appelons souvent.
     
-    $json = file_get_contents('php://input');
+    $json = file_get_contents('php://input');  // lit les information de la requête
     $data = json_decode($json,true);
-    if(empty($data)){
+    if(empty($data)){   // crée le squelette de la réponse 
         $reponse["erreur"] = true;
         $reponse["erreurs"][] = "il n'y a pas de données dans le json";
         exit(json_encode($reponse,JSON_UNESCAPED_UNICODE));
     }
 
-
+    // se connecte à la base de données
     $servername = "CONFIDENTIEL";
     $username = "CONFIDENTIEL";
     $password = "CONFIDENTIEL";
@@ -40,6 +42,8 @@ mysqli_report(MYSQLI_REPORT_OFF);
         }
     }
     
+
+    // cette fonction vérifie si le joueur est dans une partie
     function ingame($pseudo, $getgame = false){
         global $reponse,$conn;
 

@@ -1,7 +1,6 @@
 from Player import *
 from Carte import *
 from tkinter import *
-from tkinter.messagebox import *
 from Pile import *
 from Duel import *
 from tktooltip import ToolTip

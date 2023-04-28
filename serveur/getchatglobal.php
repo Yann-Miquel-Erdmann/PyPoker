@@ -10,7 +10,7 @@ include "dbhandler.php";
         exit(json_encode($reponse,JSON_UNESCAPED_UNICODE));
     }
 
-    //requête 
+    // on récupère tous les messages depuis la date du dernier massage reçu, ce ne sont que de nouveaux messages
     $stmt = $conn->prepare("SELECT * From chat_global WHERE dateheure > ?;");
     $stmt->bind_param("s",  $data["date_heure"] );
     $stmt->execute();
