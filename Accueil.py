@@ -49,8 +49,7 @@ def btnInteract(event, name,action):
 def generate_accueil(accueil, images):
     boutons =  {"jouer": {"x": 390,"y":200}, 
                 "skin":{"x": 390,"y":290},
-                "btn_regles":{"x": 390,"y":380},
-                "quitter":{"x": 390,"y":470},
+                "quitter":{"x": 390,"y":380},
                 "connexion":{"x": 750,"y":485},
                 "s_enregistrer":{"x": 100,"y":485}
             }
@@ -106,12 +105,6 @@ images = import_images()
 skins = import_skins()
 
 utilisateur = Utilisateur()
-
-#!temporaire
-utilisateur.pseudo = "Lafruge"
-utilisateur.connecte = True
-utilisateur.get_all()
-app.title("PyPoker - "+utilisateur.pseudo)
 
 
 accueil = Frame(app,bg="white")
