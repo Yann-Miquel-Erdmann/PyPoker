@@ -10,7 +10,7 @@ pour linux
 
 pour linux et windows
 
-    pip install --upgrade Pillow
+    pip install Pillow
     pip install playsound
     pip install tkinter-tooltip
     pip install requests
