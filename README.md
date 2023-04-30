@@ -15,7 +15,7 @@ pour linux et windows
     pip install tkinter-tooltip
     pip install requests
 
-ensuite il faut exécuter [Accueuil.py](https://github.com/yoyorap9/PyPoker/blob/main/Accueil.py) depuis le dossier Source   
+ensuite il faut exécuter [Accueuil.py](https://github.com/yoyorap9/PyPoker/blob/main/source/Accueil.py) depuis le dossier Source   
 
 
 ## jouer avec l'exécutable
