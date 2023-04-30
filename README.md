@@ -18,7 +18,7 @@ pour linux et windows
 ensuite il faut exécuter [Accueuil.py](https://github.com/yoyorap9/PyPoker/blob/main/Accueil.py) depuis le dossier Source   
 
 
-## jouer avec l'exicutable
+## jouer avec l'exécutable
 il est possible de jouer sur windows sans avoir à installer les bibliothèques grâce à l'exécutable disponible [ici](www.http://lmneleve1.free.fr/PyPoker/PyPoker.zip)  (il est trop grand pour github)
 
 
