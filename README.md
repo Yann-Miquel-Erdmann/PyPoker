@@ -19,7 +19,7 @@ ensuite il faut exécuter [Accueuil.py](https://github.com/yoyorap9/PyPoker/blob
 
 
 ## jouer avec l'exécutable
-il est possible de jouer sur windows sans avoir à installer les bibliothèques grâce à l'exécutable disponible [ici](http://lmn.eleve1.free.fr/PyPoker/PyPoker.zip)  (il est trop grand pour github)
+il est possible de jouer sur windows sans avoir à installer les bibliothèques grâce à l'exécutable disponible à l'adresse http://lmn.eleve1.free.fr/PyPoker/PyPoker.zip  (il est trop grand pour github)
 
 
 
